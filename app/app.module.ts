@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MealDisplayComponent } from './meal-display.component';
 import { MealEditComponent } from './meal-edit.component';
 import { MealNewComponent } from './meal-new.component';
+import { MealSortComponent } from './meal-sort.component';
 
 import { CaloriesPipe } from './calories.pipe';
 
@@ -19,6 +20,7 @@ import { CaloriesPipe } from './calories.pipe';
     MealDisplayComponent,
     MealEditComponent,
     MealNewComponent,
+    MealSortComponent,
     CaloriesPipe
   ],
   bootstrap: [AppComponent]

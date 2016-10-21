@@ -8,13 +8,22 @@ import { Food } from './food.model';
       <h1>Meal Track Pro</h1>
     </div>
     <div class="container">
-      <meal-new
-        (newMealSender)="addMeal($event)"
-      ></meal-new>
-      <meal-display
-        [childMealList] = "masterMealList"
-        (deleteSender)="triggerDelete($event)"
-      ></meal-display>
+      <div class="row">
+        <div class="col-sm-5">
+          <meal-new
+            (newMealSender)="addMeal($event)"
+          ></meal-new>
+          <meal-display
+            [childMealList] = "masterMealList"
+            (deleteSender)="triggerDelete($event)"
+          ></meal-display>
+        </div>
+        <div class="col-offset-sm-2 col-sm-5">
+          <meal-by-day
+            [childMealList]="masterMealList"
+          ></meal-by-day>
+        </div>
+      </div>
     </div>
   `
 })

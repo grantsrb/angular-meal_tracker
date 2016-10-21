@@ -5,16 +5,10 @@ import { Food } from './food.model';
   selector: 'meal-display',
   template: `
     <button (click)="showAll()">Show All</button>
-    <select (change)="showRange($event.target.value)">
-      <option value="all">Sort By Calories</option>
-      <option value="low">Low Cal</option>
-      <option value="mid">Mid Cal</option>
-      <option value="high">High Cal</option>
-    </select>
-    <label>Specify Calorie Range</label>
-    <input placeholder="Lower limit" #lowerLimit>
-    <input placeholder="Upper limit" #upperLimit>
-    <button (click)="specifyRange(lowerLimit.value, upperLimit.value)">Show Range</button>
+    <meal-sort
+      (specificRangeSender)="specifyRange($event)"
+      (generalRangeSender)="showRange($event)"
+    ></meal-sort>
     <div *ngFor="let currentMeal of childMealList | calories:showAllMeals:rangeLow:rangeHigh">
       <h3>{{currentMeal.name}}</h3>
       <h4> {{currentMeal.date}}</h4>
@@ -59,10 +53,10 @@ export class MealDisplayComponent {
     this.showAllMeals = true;
   }
 
-  specifyRange(lowerRange, upperRange) {
+  specifyRange(range: number []) {
     this.showAllMeals = false;
-    this.rangeLow = parseInt(lowerRange);
-    this.rangeHigh = parseInt(upperRange);
+    this.rangeLow = range[0];
+    this.rangeHigh = range[1];
   }
 
   showRange(userInput: string) {
