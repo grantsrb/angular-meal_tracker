@@ -21,7 +21,9 @@ import { Food } from './food.model';
 
 export class AppComponent {
   public masterMealList: Food[] = [
-    new Food("Chili", "Chili and cornbread with cheese", 1000, "10-20-16")
+    new Food("Chili", "Chili and cornbread with cheese", 1000, "10-20-16"),
+    new Food("Quesadilla", "Tortilla and cheese", 400, "10-19-16"),
+    new Food("Life serial", "Surl", 600, "10-21-16")
   ];
 
   triggerDelete(meal: Food) {
