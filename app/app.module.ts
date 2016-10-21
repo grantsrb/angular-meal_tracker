@@ -7,8 +7,10 @@ import { MealDisplayComponent } from './meal-display.component';
 import { MealEditComponent } from './meal-edit.component';
 import { MealNewComponent } from './meal-new.component';
 import { MealSortComponent } from './meal-sort.component';
+import { MealDateDisplayComponent } from './meal-date-display.component';
 
 import { CaloriesPipe } from './calories.pipe';
+import { DatePipe } from './date.pipe';
 
 @NgModule ({
   imports: [
@@ -21,7 +23,9 @@ import { CaloriesPipe } from './calories.pipe';
     MealEditComponent,
     MealNewComponent,
     MealSortComponent,
-    CaloriesPipe
+    MealDateDisplayComponent,
+    CaloriesPipe,
+    DatePipe
   ],
   bootstrap: [AppComponent]
 })

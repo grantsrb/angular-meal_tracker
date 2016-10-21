@@ -10,18 +10,22 @@ import { Food } from './food.model';
     <div class="container">
       <div class="row">
         <div class="col-sm-5">
-          <meal-new
-            (newMealSender)="addMeal($event)"
-          ></meal-new>
-          <meal-display
-            [childMealList] = "masterMealList"
-            (deleteSender)="triggerDelete($event)"
-          ></meal-display>
+          <div class="panel">
+            <meal-new
+              (newMealSender)="addMeal($event)"
+            ></meal-new>
+            <meal-display
+              [childMealList] = "masterMealList"
+              (deleteSender)="triggerDelete($event)"
+            ></meal-display>
+          </div>
         </div>
         <div class="col-offset-sm-2 col-sm-5">
-          <meal-by-day
-            [childMealList]="masterMealList"
-          ></meal-by-day>
+          <div class="panel">
+            <meal-date-display
+              [childMealList]="masterMealList"
+            ></meal-date-display>
+          </div>
         </div>
       </div>
     </div>
@@ -30,9 +34,9 @@ import { Food } from './food.model';
 
 export class AppComponent {
   public masterMealList: Food[] = [
-    new Food("Chili", "Chili and cornbread with cheese", 1000, "10-20-16"),
-    new Food("Quesadilla", "Tortilla and cheese", 400, "10-19-16"),
-    new Food("Life serial", "Surl", 600, "10-21-16")
+    new Food("Chili", "Chili and cornbread with cheese", 1000, "2016-10-20"),
+    new Food("Quesadilla", "Tortilla and cheese", 400, "2016-10-19"),
+    new Food("Life serial", "Surl", 600, "2016-10-21")
   ];
 
   triggerDelete(meal: Food) {

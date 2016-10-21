@@ -9,6 +9,7 @@ import { Food } from './food.model';
       (specificRangeSender)="specifyRange($event)"
       (generalRangeSender)="showRange($event)"
     ></meal-sort>
+    <h2>Meals</h2>
     <div *ngFor="let currentMeal of childMealList | calories:showAllMeals:rangeLow:rangeHigh">
       <h3>{{currentMeal.name}}</h3>
       <h4> {{currentMeal.date}}</h4>
