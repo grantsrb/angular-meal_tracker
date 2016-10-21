@@ -1,3 +1,14 @@
 .jumbotron {
-  text-align: center; 
+  text-align: center;
+}
+
+.container {
+  background-image: url(../../resources/images/heart-waffle.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.panel {
+  background-color: rgba(255, 255, 255, 0.5);
 }
