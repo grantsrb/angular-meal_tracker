@@ -1,6 +1,4 @@
-# _Github Connection_
-
-### _Epicodus: Javascript Week 2_
+# _Meal Tracker_
 
 #### By _[**Satchel Grant**](https://github.com/grantsrb)_
 
@@ -8,7 +6,7 @@
 
 This webpage logs user's meals and tracks the caloric content of the meals. It can then display the meals by caloric content and sum the total calories consumed in a given day.
 
-## Specs
+## Specifications
 
 | Behavior | Input | Output |
 |----------|-------|--------|
